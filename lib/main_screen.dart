@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:muvila/movielist_screen.dart';
+import 'package:muvila/random_screen.dart';
 
 class MainScreen extends StatefulWidget {
   final Text name;
@@ -44,7 +46,7 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24.0,
-                          fontFamily: 'Playfair',
+                          fontFamily: 'Montserrat',
                         ),
                       ),
                     ),
@@ -56,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 36.0,
-                          fontFamily: 'Playfair',
+                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -78,7 +80,12 @@ class _MainScreenState extends State<MainScreen> {
                           padding: const EdgeInsets.symmetric(vertical: 30.0),
                           child: Center(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return RandomScreen();
+                                }));
+                              },
                               child: Text(
                                 'Pilih acak',
                                 style: TextStyle(
@@ -180,7 +187,12 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return MovieListScreen();
+                            }));
+                          },
                           child: Text(
                             'Lihat Semua',
                             style: TextStyle(

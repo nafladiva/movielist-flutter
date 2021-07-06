@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muvila/onboarding_content.dart';
+import 'package:muvila/model/onboarding_content.dart';
 import 'package:muvila/name_screen.dart';
 
 class OnBoarding extends StatefulWidget {
