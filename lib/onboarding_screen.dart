@@ -103,7 +103,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 );
               },
               child: Text(
-                current == contents.length - 1 ? 'Mulai' : 'Next',
+                current == contents.length - 1 ? 'Start' : 'Next',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontFamily: 'Montserrat',

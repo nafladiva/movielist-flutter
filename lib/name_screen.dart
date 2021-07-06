@@ -60,6 +60,10 @@ class _NameScreenState extends State<NameScreen> {
                   ),
                   decoration: InputDecoration(
                     fillColor: Colors.white,
+                    hintText: 'Your name',
+                    hintStyle: TextStyle(
+                      color: Colors.white54,
+                    ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.white,
