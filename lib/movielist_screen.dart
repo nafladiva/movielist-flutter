@@ -64,13 +64,12 @@ class MovieListScreen extends StatelessWidget {
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
               crossAxisCount: 3,
-              children: movie_contents.map((value) {
-                final MovieContent movie = value;
+              children: movie_contents.map((item) {
                 return InkWell(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return DetailScreen(movie: movie);
+                      return DetailScreen(movie: item);
                     }));
                   },
                   child: Padding(
@@ -82,7 +81,7 @@ class MovieListScreen extends StatelessWidget {
                           height: 300.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage(value.image),
+                              image: AssetImage(item.image),
                               fit: BoxFit.cover,
                             ),
                           )),

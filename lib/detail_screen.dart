@@ -91,7 +91,7 @@ class DetailScreen extends StatelessWidget {
                       color: Color(0xFFFFD369).withOpacity(0.4),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(7.0),
                       child: Text(
                         movie.rating.toString(),
                         style: TextStyle(

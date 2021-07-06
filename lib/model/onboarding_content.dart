@@ -10,14 +10,14 @@ class OnBoardContent {
 List<OnBoardContent> contents = [
   OnBoardContent(
       image: 'images/onboarding1.png',
-      title: 'Bingung',
-      desc: 'Bingung mau nonton apa sangking banyaknya film di list kamu?'),
+      title: 'Confused',
+      desc: 'Confused about what to watch because there are too many movies?'),
   OnBoardContent(
       image: 'images/onboarding2.png',
-      title: 'Tidak tahu',
-      desc: 'Mau nonton filmnya tapi gak tau filmnya tentang apa?'),
+      title: 'Curious',
+      desc: "Want to watch a movie but don't know what it's about?"),
   OnBoardContent(
       image: 'images/onboarding3.png',
-      title: 'Tunggu apalagi!',
-      desc: 'Inilah saatnya kamu menggunakan Muvila!'),
+      title: "It's time!",
+      desc: "It's time for you to use Muvila"),
 ];

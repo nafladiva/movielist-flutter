@@ -29,7 +29,7 @@ class _NameScreenState extends State<NameScreen> {
                 height: 50,
               ),
               Text(
-                'Agar lebih akrab, bolehkah kami meminta namamu?',
+                'To be more familiar, may we ask your name?',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -41,7 +41,7 @@ class _NameScreenState extends State<NameScreen> {
                 height: 20,
               ),
               Text(
-                'Nama kamu hanya kami gunakan untuk menyapamu, tidak ada yg perlu dikhawatirkan kok! Kalau tidak diisi juga tidak apa-apa :)',
+                "We only use your name to greet you, there's nothing to worry about! If you don't want to fill it, that's okay :)",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -81,7 +81,7 @@ class _NameScreenState extends State<NameScreen> {
                     Text name = Text(nameController.text);
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (_) => MainScreen(
-                              name: name.data == '' ? Text('Kamu') : name,
+                              name: name.data == '' ? Text('You') : name,
                             )));
                   },
                   child: Text(
