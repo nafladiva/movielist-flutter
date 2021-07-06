@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:muvila/model/movie_content.dart';
 import 'package:muvila/randomresult_screen.dart';
 
-class RandomScreen extends StatelessWidget {
+class RandomScreen extends StatefulWidget {
+  @override
+  _RandomScreenState createState() => _RandomScreenState();
+}
+
+class _RandomScreenState extends State<RandomScreen> {
+  String _anim = 'images/search1.jpg';
+
   int randomNum() {
     Random random = new Random();
     int randomNumber = random.nextInt(9);
@@ -65,18 +72,44 @@ class RandomScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 30),
-          Container(
-            child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Image.asset('images/poster/falcon.jpg'),
+          SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              "Let's choose some movies for you to watch, by just hit the 'Random' button!",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Montserrat',
+                fontSize: 20.0,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 32.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                width: 250.0,
+                height: 250.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(_anim),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
             ),
           ),
           SizedBox(height: 30),
           ElevatedButton(
             onPressed: () {
-              Timer(Duration(seconds: 3), () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
+              setState(() {
+                _anim = 'images/search2.gif';
+              });
+              Timer(Duration(seconds: 4), () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
                   return RandomResultScreen(movie: movie_contents[randomNum()]);
                 }));
               });
