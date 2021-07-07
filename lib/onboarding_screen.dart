@@ -40,23 +40,29 @@ class _OnBoardingState extends State<OnBoarding> {
               },
               itemBuilder: (_, index) {
                 return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     SizedBox(height: 40),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 72.0, horizontal: 32.0),
                       child: Center(
-                        child: Image.asset(contents[index].image),
+                        child: Image.asset(
+                          contents[index].image,
+                          height: MediaQuery.of(context).size.height * 0.33,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        contents[index].title,
-                        style: TextStyle(
-                          fontSize: 32.0,
-                          fontFamily: 'Playfair',
-                          fontWeight: FontWeight.bold,
+                      child: Center(
+                        child: Text(
+                          contents[index].title,
+                          style: TextStyle(
+                            fontSize: 32.0,
+                            fontFamily: 'Playfair',
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
